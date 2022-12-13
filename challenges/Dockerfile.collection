@@ -1,10 +1,10 @@
 FROM buildpack-deps:jessie
 RUN apt-get update && apt-get install -y --force-yes vim less
 
-COPY buf /challenges/buf
-COPY osint /challenges/osint
-COPY osint2 /challenges/osint2
-COPY pass /challenges/pass
+COPY buf/buf.c /challenges/buf/buf.c
+COPY osint/osint.c /challenges/osint/osint.c
+COPY osint2/osint2.c /challenges/osint2/osint2.c
+COPY pass/pass.c /challenges/pass/pass.c
 WORKDIR /challenges
 
 RUN gcc pass/pass.c -o pass/pass && rm pass/pass.c
