@@ -1,5 +1,5 @@
-FROM ubuntu
-RUN apt-get update && apt-get install -y --force-yes vim less openssl sudo
+FROM ubuntu:jammy
+RUN apt-get update && apt-get install -y vim less openssl sudo
 
 COPY greetings.txt /home/monica/greetings.txt
 COPY flag /flag

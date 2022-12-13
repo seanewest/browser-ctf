@@ -1,5 +1,5 @@
-FROM buildpack-deps:jessie
-RUN apt-get update && apt-get install -y --force-yes vim less
+FROM buildpack-deps:jammy
+RUN apt-get update && apt-get install -y vim less
 
 COPY pass.c /pass/pass.c
 WORKDIR /pass
