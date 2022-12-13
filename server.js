@@ -21,6 +21,11 @@ server.on('upgrade', function upgrade(request, socket, head) {
       wss.emit('connection', ws, 'osint2');
     });
   }
+  else if (pathname === '/socialeng') {
+    wss.handleUpgrade(request, socket, head, function done(ws) {
+      wss.emit('connection', ws, 'socialeng');
+    });
+  }
   else if (pathname === '/buf') {
     wss.handleUpgrade(request, socket, head, function done(ws) {
       wss.emit('connection', ws, 'buf');
