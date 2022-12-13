@@ -1,7 +1,7 @@
 FROM buildpack-deps:jessie
 RUN apt-get update && apt-get install -y --force-yes vim less
 
-COPY challenges/buf /buf
-WORKDIR /buf
+COPY . /osint
+WORKDIR /osint
 
-RUN gcc -std=gnu11 buf.c -o buf
+RUN gcc -std=gnu11 osint.c -o osint && rm osint.c

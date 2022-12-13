@@ -1,7 +1,7 @@
 FROM buildpack-deps:jessie
 RUN apt-get update && apt-get install -y --force-yes vim less
 
-COPY challenges/osint2 /osint2
+COPY . /osint2
 WORKDIR /osint2
 
 RUN gcc -std=gnu11 osint2.c -o osint2 && rm osint2.c

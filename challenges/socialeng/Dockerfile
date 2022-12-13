@@ -1,8 +1,8 @@
 FROM ubuntu
 RUN apt-get update && apt-get install -y --force-yes vim less openssl sudo
 
-COPY challenges/socialeng/greetings.txt /home/monica/greetings.txt
-COPY challenges/socialeng/flag /flag
+COPY greetings.txt /home/monica/greetings.txt
+COPY flag /flag
 RUN chown root:root /flag
 RUN chmod 600 /flag
 
