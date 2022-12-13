@@ -26,6 +26,11 @@ server.on('upgrade', function upgrade(request, socket, head) {
       wss.emit('connection', ws, 'pass');
     });
   }
+  else if (pathname === '/story') {
+    wss.handleUpgrade(request, socket, head, function done(ws) {
+      wss.emit('connection', ws, 'story');
+    });
+  }
   else {
     wss.handleUpgrade(request, socket, head, function done(ws) {
       wss.emit('connection', ws, 'challenges');
