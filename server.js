@@ -16,6 +16,11 @@ server.on('upgrade', function upgrade(request, socket, head) {
       wss.emit('connection', ws, 'osint');
     });
   }
+  else if (pathname === '/osint2') {
+    wss.handleUpgrade(request, socket, head, function done(ws) {
+      wss.emit('connection', ws, 'osint2');
+    });
+  }
   else if (pathname === '/buf') {
     wss.handleUpgrade(request, socket, head, function done(ws) {
       wss.emit('connection', ws, 'buf');
