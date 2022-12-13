@@ -1,0 +1,17 @@
+{
+  "name": "browser-ctf",
+  "version": "0.0.2",
+  "description": "The start of something cool",
+  "license": "ISC",
+  "scripts": {
+    "start": "./start.sh"
+  },
+  "devDependencies": {
+    "budo": "latest"
+  },
+  "dependencies": {
+    "docker-browser-console": "latest",
+    "websocket-stream": "latest",
+    "ws": "latest"
+  }
+}
